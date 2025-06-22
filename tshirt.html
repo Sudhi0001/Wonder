@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Casual Shirts – Wonder</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+      background-color: #f8fafc;
+      color: #1e293b;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #2a1344;
+      color: white;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .logo-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-left img {
+      width: 53px;
+      height: 53px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+    .brand-name {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #d3d9e2;
+    }
+    .nav-icons a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 0.75rem;
+      font-size: 1rem;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin: 1rem 2rem;
+      text-decoration: none;
+      color: #7c3aed;
+      font-weight: 600;
+    }
+    .nav-icons a:hover {
+      color: #facc15;
+    }
+    .nav-icons {
+      display: flex;
+      align-items: center;
+    }
+
+    .tshirt-page {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1rem 2rem 3rem;
+    }
+
+    .tshirt-page h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+    }
+
+    .tshirt-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .tshirt-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .tshirt-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .tshirt-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .tshirt-card h3 {
+      margin-top: 0.75rem;
+      font-size: 1.2rem;
+      color: #1f2937;
+    }
+
+    .tshirt-card p {
+      color: #475569;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+    .add-to-cart-btn {
+      background-color: #334155;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      transition: background-color 0.2s ease;
+    }
+
+    .add-to-cart-btn:hover {
+      background-color: #334155;
+    }
+    .back-link {
+      background-color: #334155;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      transition: background-color 0.2s ease;
+    }
+    .back-link:hover {
+      background-color: #334155;
+    }
+     /* Floating Icon */
+    .floating-logo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      z-index: 1000;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .floating-logo:hover {
+      transform: scale(1.1);
+    }
+
+    .floating-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: #e2e8f0;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+    .contact-us {
+  margin-top: 2rem;
+  font-size:0.9rem;
+  line-height:1.6;
+}
+.contact-us h4{
+  margin-bottom: 0.5rem;
+  font-size:1rem;
+  color: #facc15;
+}
+.contact-us a{
+  color: #93c5fd;
+  text-decoration: none;
+  
+}
+.contact-us a:hover {
+  text-decoration: underline;
+}
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+   <header>
+  <div class="nav-bar" style="display: flex; justify-content: space-between; align-items: center;">
+    <div class="logo-left">
+      <img src="WhatsApp Image 2025-06-21 at 22.36.42_3b84c60d.jpg" alt="Wonder Logo">
+      <span class="brand-name">Wonder</span>
+    </div>
+    <div class="nav-icons">
+      <a href="#" title="Search">🔍</a>
+      <a href="profile.html" title="Profile">👤</a>
+      <a href="cart.html" title="Cart">🛒</a>
+    </div>
+  </div>
+  <h1>Trendy T-Shirts</h1>
+</header>
+  
+
+  <!-- Back Link -->
+  <a href="index.html" class="back-link">← Back to Home</a>
+
+  <!-- Shirt Grid Section -->
+  <div class="tshirt-card">
+    <h2>Choose Your Style</h2>
+    <div class="tshirt-grid">
+      
+      <div class="tshirt-card">
+        <img src="tshirt1.jpg" alt="Beige Hoddie">
+        <h3>Beige Hoddie</h3>
+        <p>₹1899</p>
+        <a href="#" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+
+      <div class="tshirt-card">
+        <img src="tshirt2.jpg" alt="Anime Inspired Black Shirt">
+        <h3>Anime Inspired Black Shirt</h3>
+        <p>₹899</p>
+        <a href="#" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+
+      <div class="tshirt-card">
+        <img src="tshirt3.jpg" alt="Black Printed shirt">
+        <h3>Black Printed shirt</h3>
+        <p>₹699</p>
+        <a href="#" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+
+      <div class="tshirt-card">
+        <img src="tshirt4.jpg" alt="White Polo Shirt">
+        <h3>White Polo Shirt</h3>
+        <p>₹999</p>
+        <a href="#" class="add-to-cart-btn">Add to Cart</a>
+     </div>
+      <div class="tshirt-card">
+        <img src="tshirt5.jpg" alt="Navy Blue Polo Shirt">
+        <h3>Navy Blue Polo Shirt</h3>
+        <p>₹999</p>
+        <a href="#" class="add-to-cart-btn">Add to Cart</a>
+    </div>
+    <div class="tshirt-card">
+        <img src="tshirt6.jpg" alt="Brown Formal T-Shirt">
+        <h3>Brown Formal T-Shirt</h3>
+        <p>₹999</p>
+        <a href="#" class="add-to-cart-btn">Add to Cart</a>
+    </div>
+    <div class="tshirt-card">
+        <img src="tshirt7.jpg" alt="Black Full Sleev Sweater">
+        <h3>Black Full Sleev Sweater</h3>
+        <p>₹1299</p>
+        <a href="#" class="add-to-cart-btn">Add to Cart</a>
+     </div>
+    <div class="tshirt-card">
+        <img src="tshirt8.jpg" alt="Green Full Sleev Sweater">
+        <h3>Green Full Sleev Sweater</h3>
+        <p>₹1199</p>
+        <a href="#" class="add-to-cart-btn">Add to Cart</a>
+      </div>
+    
+
+    </div>
+    <a href="index.html" class="floating-logo" title="Back To Home">
+        <img src="WhatsApp Image 2025-06-21 at 22.36.42_3b84c60d.jpg" alt="Wonder Logo">
+    </a>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Wonder – All Rights Reserved.
+    <div class="contack-us">
+      <h4>Contact Us</h4>
+      <p>📧 Email:<a href="mailto:sudhig10@gmail.com">sudhig10@gmail.com</a></p>
+      <p>📞 Phone: <a href="tel:+916364800327">+91 6364XXXX27</a></p>
+      <p>📍 Address:123 Fashion Tech layout, Bengaluru, India</p>
+      <p>📸 Instagram:<a href="https://www.instagram.com/sudheendra_a_1/">sudheendra_a_1</a></p>
+    </div>
+  </footer>
+  
+
+</body>
+</html>
