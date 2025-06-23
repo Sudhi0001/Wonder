@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart-Wonder</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #f8fafc;
+            color: #1e293b;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #2a1344;
+            color: white;
+            padding: 1.5rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        .cart-page {
+      max-width: 1100px;
+      margin: auto;
+      padding: 1rem 2rem 3rem;
+    }
+
+    .cart-page h2 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+    }
+
+    .cart-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .cart-card {
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+      padding: 1rem;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+
+    .cart-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .cart-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .cart-card h3 {
+      margin-top: 0.75rem;
+      font-size: 1.2rem;
+      color: #1f2937;
+    }
+
+    .cart-card p {
+      color: #475569;
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+
+        .logo-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-left img {
+            width: 53px;
+            height: 53px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .brand-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #d3d9e2;
+        }
+
+        .nav-icons a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 0.75rem;
+            font-size: 1rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin: 1rem 2rem;
+            text-decoration: none;
+            color: #7c3aed;
+            font-weight: 600;
+        }
+        .super-btn {
+            display: inline-block;
+            margin: 1rem 2rem;
+            text-decoration: none;
+            color: #7c3aed;
+            font-weight: 800;
+        }
+        .sport-btn {
+            display: inline-block;
+            margin: 1rem 2rem;
+            text-decoration: none;
+            color: #7c3aed;
+            font-weight: 600;
+        }
+
+
+        .nav-icons a:hover {
+            color: #facc15;
+        }
+        .nav-icons {
+            display: flex;
+            align-items: center;
+        }
+        .back-link {
+      background-color: #334155;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      transition: background-color 0.2s ease;
+    }
+    .back-link:hover {
+      background-color: #334155;
+    }
+    .super-btn {
+      background-color: #334155;
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      transition: background-color 0.2s ease;
+    }
+    .super-btn:hover {
+      background-color: #334155;
+    }
+     .sport-btn {
+      background-color: #334155;
+      color: white;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 500;
+      display: inline-block;
+      transition: background-color 0.2s ease;
+    }
+    .sport-btn:hover {
+      background-color: #334155;
+    }
+    .floating-logo {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      z-index: 1000;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .floating-logo:hover {
+      transform: scale(1.1);
+    }
+
+    .floating-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    footer {
+      background-color: #0f172a;
+      color: #e2e8f0;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 3rem;
+      font-size: 0.9rem;
+    }
+    .contact-us {
+  margin-top: 2rem;
+  font-size:0.9rem;
+  line-height:1.6;
+}
+.contact-us h4{
+  margin-bottom: 0.5rem;
+  font-size:1rem;
+  color: #facc15;
+}
+.contact-us a{
+  color: #93c5fd;
+  text-decoration: none;
+  
+}
+.contact-us a:hover {
+  text-decoration: underline;
+}
+.total-table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 1.2rem;
+  font-size: 0.75rem;
+  background-color: #f1f5f9;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.total-table td {
+  padding: 0.6rem 0.9rem;
+  border-bottom: 1px solid #cbd5e1;
+  text-align: left;
+}
+
+.total-table td:last-child {
+  text-align: right;
+  font-weight: 600;
+  color: #334155;
+}
+
+.total-table tr:last-child td {
+  border-bottom: none;
+  background-color: #e2e8f0;
+}
+    </style>
+</head>
+<body>
+    <section>
+        <header>
+            <div class="logo-left">
+                <img src="WhatsApp Image 2025-06-21 at 22.36.42_3b84c60d.jpg" alt="Wonder Logo">
+                <span class="brand-name">Wonder</span>
+            </div>
+            <section class="cart">
+            <main>
+            <h1>🛒Shopping Cart🛒</h1>
+            
+            
+        </main>
+            <nav class="nav-icons">
+                <a href="shirts.html">Shirts</a>
+                <a href="tshirt.html">Tshirt</a>
+                <a href="jeans.html">Jeans</a>
+                <a href="shoes.html">Shoes</a>
+
+            </nav>
+        </header>
+        <a href="index.html" class="back-link">Back to Home</a>
+        <div class="cart-page">
+            <h2>Your Cart</h2>
+            <div class="cart-grid">
+                <div class="cart-card">
+                    <img src="tshirt7.jpg" alt="Black Full Sleev Sweater">
+                    
+                    <h3>Black Full Sleev Sweater</h3>
+                    <p>Price: ₹1299</p>
+                    <a href="tshirt.html" class="super-btn">Add More</a>
+                </div>
+                <div class="cart-card">
+                    <img src="jeans7.jpg" alt="White Baggy Jeans">
+                    
+                    <h3>White Baggy Jeans</h3>
+                    <p>Price: ₹1999</p>
+                    <a href="jeans.html" class="super-btn">Add More</a>
+                </div>
+                <div class="cart-card">
+                    <img src="jacket1.jpg" alt="Black jacket">
+                    
+                    <h3>Black Jacket</h3>
+                    <p>Price: ₹2999</p>
+                    <a href="jacket.html" class="super-btn">Add More</a>
+                </div>
+                <div class="cart-card">
+                    <img src="shoes3.jpg" alt="Nike SB-Edition Grey">
+                    <h3>Nike SB-Edition Grey</h3>
+                    <p>Price: ₹9899</p>
+                    <a href="shoes.html" class="super-btn">Add More</a>
+                </div>
+            <div class="cart-page">
+                <h2>Total Amount</h2>
+                <table class=" total-table">
+                    <tr>
+                        <td>Total Items:</td>
+                        <td>4</td>
+                    </tr>
+                    <tr>
+                        <td>Black Full Sleev Sweater</td>
+                        <td>₹1299</td>
+                    </tr>
+                    <tr>
+                        <td>White Baggy Jeans</td>
+                        <td>₹1999</td>
+                    </tr>
+                    <tr>
+                        <td>Black Jacket</td>
+                        <td>₹2999</td>
+                    </tr>
+                    <tr>
+                        <td>Nike SB-Edition Grey</td>
+                        <td>₹9899</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Amount:</strong></td>
+                        <td><strong>₹16196</strong></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Shipping Charges:</strong></td>
+                        <td><strong>Free</strong></td>
+                    </tr>
+                    <tr>
+                        <td>GST(18%)</td>
+                        <td>₹2915.28</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Grand Total:</strong></td>
+                        <td><strong>₹19111.28</strong></td>
+                    </tr>
+
+
+                </table>
+                
+            </div>
+
+       
+    </section>
+    <section>
+        <a href="checkout.html" class="sport-btn">Proceed to Checkout</a>
+    </section>
+    <a href="index.html" class="floating-logo" title="Back To Home">
+        <img src="WhatsApp Image 2025-06-21 at 22.36.42_3b84c60d.jpg" alt="Wonder Logo">
+    </a>
+    <!-- Footer -->
+  <footer>
+    © 2025 Wonder – All Rights Reserved.
+    <div class="contack-us">
+      <h4>Contact Us</h4>
+      <p>📧 Email:<a href="mailto:sudhig10@gmail.com">sudhig10@gmail.com</a></p>
+      <p>📞 Phone: <a href="tel:+916364800327">+91 6364XXXX27</a></p>
+      <p>📍 Address:123 Fashion Tech layout, Bengaluru, India</p>
+      <p>📸 Instagram:<a href="https://www.instagram.com/sudheendra_a_1/">sudheendra_a_1</a></p>
+    </div>
+  </footer>
+    
+</body>
+</html>
+    
